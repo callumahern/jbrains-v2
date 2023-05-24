@@ -1,4 +1,13 @@
+require 'fraction'
 
+RSpec.describe 'Adding fractions' do
+  context '0 + 0' do
+    it 'equals zero' do
+      sum = Fraction.new(0).add(Fraction.new(0))
+      expect(sum.to_i).to eq 0
+    end
+  end
+end
 
 
 
