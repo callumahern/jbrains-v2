@@ -6,11 +6,11 @@ class Fraction
     @value = value
   end
 
-  def add(other_value)
-    self
+  def plus(that)
+    self.class.new(value + that.value)
   end
 
   def int_value
-    0
+    value
   end
 end
