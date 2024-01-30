@@ -1,7 +1,7 @@
 require 'fraction'
 require 'pry'
 
-RSpec.describe 'Adding fractions' do
+RSpec.describe 'Adding whole numbers' do
   context '0 + 0' do
     it 'equals zero' do
       sum = Fraction.new(0).plus(Fraction.new(0))
@@ -45,6 +45,15 @@ RSpec.describe 'Adding fractions' do
   end
 end
 
+RSpec.describe 'Adding fractions' do
+  context 'non trivial denominators' do
+    it 'expects 1/5 + 2/5 to equal 3/5' do
+      sum = Fraction.new(1, 5).plus(Fraction.new(2, 5))
+      expect(sum.get_numerator).to eq 3
+      expect(sum.get_denominator).to eq 5
+    end
+  end
+end
 
 
 
